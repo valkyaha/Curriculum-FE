@@ -7,7 +7,7 @@ const NavbarLanguage = (props) => {
                 {
                     utils.range(0, props.availableLanguages.objectResponse.length - 1).map(
                         object => (
-                            <li>
+                            <li key={object.toString()}>
                                 {props.availableLanguages.objectResponse[object].languageCode}
                             </li>
                         )

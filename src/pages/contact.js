@@ -1,13 +1,7 @@
-const Contact = () => {
+const Contact = (props) => {
+
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100vh'
-            }}
-        >
+        <div>
             <h1>Contact Us</h1>
         </div>
     );
