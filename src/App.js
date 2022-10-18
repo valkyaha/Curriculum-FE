@@ -11,19 +11,21 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Skills from "./pages/skills";
 import Experiences from "./pages/experiences";
+import Projects from "./pages/projects";
 
 function App() {
     return (
         <div>
             <Header/>
             <BrowserRouter>
-                <Navbar/>
+                <Navbar availableLanguages={languagesText}/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/experience" element={<Experiences experienceProp={experienceText}/>}/>
                     <Route path="/about" element={<About aboutMeProp={aboutMeText}/>}/>
                     <Route path="/languages" element={<Languages languageProp={languagesText}/>}/>
-                    <Route path="/skills" element={<Skills/>}/>
+                    <Route path="/skills" element={<Skills skillsProps={skillsText}/>}/>
+                    <Route path="/projects" element={<Projects projectsProps={projectsText}/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/sign-up" element={<SignUp/>}/>
                 </Routes>
@@ -46,19 +48,11 @@ const languagesText = {
         },
         {
             "id": "e4b73810-b984-4e3b-abd4-83a7bbf868ea",
-            "language": "Spanish",
+            "language": "Catalan",
             "read": "HIGH",
             "speak": "HIGH",
             "listen": "HIGH",
             "languageCode": "CAT"
-        },
-        {
-            "id": "e4b73810-b984-4e3b-abd4-83a7bbf868ea",
-            "language": "Spanish",
-            "read": "HIGH",
-            "speak": "HIGH",
-            "listen": "HIGH",
-            "languageCode": "ENG"
         },
     ],
     "status": "OK",
@@ -129,6 +123,41 @@ const experienceText = {
                     "languageCode": "SPA"
                 }
             ],
+            "languageCode": "SPA"
+        }
+    ],
+    "status": "OK",
+    "message": "About me information",
+    "error": null
+}
+
+const skillsText = {
+    "timestamp": "2022-10-18T11:01:15.477529",
+    "objectResponse": [
+        {
+            "id": "24dca42d-60b4-4c12-8844-afb779a63a4c",
+            "skillName": "Skill test amazing",
+            "description": "Skill",
+            "masteringLevel": "HIGH",
+            "languageCode": "SPA"
+        }
+    ],
+    "status": "OK",
+    "message": "About me information",
+    "error": null
+}
+
+const projectsText = {
+    "timestamp": "2022-10-18T11:34:08.805983",
+    "objectResponse": [
+        {
+            "id": "4abdbe6a-b0fa-46e6-ac48-17558c9f377c",
+            "projectName": "Awesome message",
+            "description": "Project project",
+            "url": "fdddd",
+            "started": "2022-10-18T11:01:15.477",
+            "ended": "2022-10-18T11:01:15.477",
+            "currentlyWorking": false,
             "languageCode": "SPA"
         }
     ],
